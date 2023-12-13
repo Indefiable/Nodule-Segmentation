@@ -712,6 +712,8 @@ public class NoduleData {
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setDialogTitle("Choose a Red ONLY clusterer model.");
            
+        fileChooser.showOpenDialog(null);
+        
         String extension = fileChooser.getSelectedFile().getName().substring(fileChooser.getSelectedFile().getName().lastIndexOf(".") + 1);
         
         if(extension.equalsIgnoreCase("model")) {
