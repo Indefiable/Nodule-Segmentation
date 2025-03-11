@@ -1,0 +1,28 @@
+name: Generate and Publish Javadoc
+
+on:
+  push:
+    branches:
+      - main  # Change this if your default branch is different
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy - Publish Javadoc
+        uses: MathieuSoysal/Javadoc-publisher.yml@v3.0.2
+        with:
+          java-version: 17  
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          deploy-mode: branch 
+          javadoc-branch: javadoc
+          target-folder: docs  
+          java-distribution: temurin 
+          project: maven  
+          custom-command: mvn javadoc:javadoc  
+          without-deploy: false 
