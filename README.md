@@ -6,6 +6,8 @@ and uses Color Clustering algorithms to outline, categorize, count, and measure 
 It is extended from Weka's unsupervised ColorClustering plugin, and uses .model files generated from 
 that plugin. 
 
+For documentation of the source code, visit the documentation [website](https://indefiable.github.io/Nodule-Segmentation/).
+
 Limitations
 ===========
 
@@ -13,29 +15,28 @@ Note that this plugin was made solely with red and green fluoresced nodules in m
 sucessful output data are as shown in the tutorial. Other types/colors of nodules may be supported in the future with 
 further development of the plugin. There is a lot that can be done/improved/expanded here. 
 
-The size of the nodules with respect to he image also matter. There is an upper threshold based on the dataset 
-this was made for. That upper threshold can be changed manually within the code and a new jar can be packaged using Maven. 
+The size of the nodules with respect to he image also matter. 
 
 Installation
 ============
 
-This page contains the source code and the target jar for the plugin, but all 
-you need to run the plugin is the target jar. Once you clone the files to your 
-computer, you need to drop the .jar file into the ImageJ/plugins folder, then restart
-ImageJ/ImageJ2/FIJI. It should then be in the plugins dropdown menu. 
+First install [fiji](https://imagej.net/software/fiji/). Then download the .jar file in the releases on this github page,
+and drop the .jar file into the plugins folder wherever you installed fiji. 
 
 
-Before you can run Nodule Segmentation, you must generate a .model file for your dataset. 
+Before you can run Nodule Segmentation, you must generate a .model file for your dataset using Weka's color clustering plugin.
 
 
 Generating the Model file
 =========================
 For a data set with similar characteristics, you will likely only need one .model file for the entire dataset.
 To generate the file, you need to use Weka's Color Clustering plugin, a part of 
-[Weka's trainable Segmentation](https://github.com/fiji/Trainable_Segmentation/tree/master).
+[Weka's trainable Segmentation](https://github.com/fiji/Trainable_Segmentation/tree/master). Note this comes with fiji. If 
+you instead installed just ImageJ, you'll have to install weka separately.
 Once installed, open ImageJ and an image from your dataset via ImageJ. Then, open the plugin under plugins -> Segmentation 
 -> Color Clustering. There are a lot of settings here, and you can try different settings to optimize your output. After you 
-run the plugin and are happy with the results, you can save the clusterer, which will be your model file.
+run the plugin and are happy with the results, you can save the clusterer, which will be your model file. There are more 
+detailed instructions on doing this below.
 
 
 
@@ -50,12 +51,10 @@ Instructions
 
 4. Browse your files and select the image with the nodules and the model file generated earlier.
 
-5. Let the program run. Images will open and close as the program does this (I am looking into how to stop this from
-happening, as it's annoying). 
+5. Let the program run. 
 
 6. At the end, the segmented image pops up with the predicted nodules outlined. This is where manual input is allowed.
-You can click on any of the outlines and delete, redraw, or edit the outline to correct any mistakes (I am working on adding 
-the ability to add a new outline from anywhere). 
+You can click on any of the outlines and delete, redraw, or edit the outline to correct any mistakes.
 
 7. Once finished, click finish and you can choose where to save the data. 
 
@@ -97,8 +96,8 @@ wherever you've installed FIJI/ImageJ, and restart the program. Then it should s
 <img src="tutorial/5.png" alt="Plugins-> Nodule Data" width="50%">
 
 Once you open it, it will prompt you to choose two files from your computer. The first is the image you want to segment,
-and the second is the .model file we just made. Once you do that, the program will start running. Images will pop up and 
-close; this is normal. You may be prompted with a small portion of your image and a question. 
+and the second is the .model file we just made. Once you do that, the program will start running. You may be prompted with a
+ small portion of your image and a question. 
 
 <img src="tutorial/6.png" alt="Is this a mixed nodule?" width="25%">
 
