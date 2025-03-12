@@ -1,3 +1,4 @@
+[![Build Status](https://github.com/Indefiable/Nodule-Segmentation/actions/workflows/maven.yml/badge.svg)](https://github.com/Indefiable/Nodule-Segmentation/actions/workflows/maven.yml)
 
 Nodule Segmentation
 ===================
