@@ -40,7 +40,7 @@ import trainableSegmentation.unsupervised.ColorClustering.Channel;
  * @author Brandin Farris
  *
  */
-@Plugin(type = Command.class, menuPath = "Plugins>Nodule Segmentation")
+@Plugin(type = Command.class, menuPath = "Plugins>Nodule Analysis>Nodule Segmentation")
 public class NoduleSegmentation implements Command {
 	
 	
