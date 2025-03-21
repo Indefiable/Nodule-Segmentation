@@ -37,28 +37,13 @@ the root system separately.
 
 There are currently no unsupervised methods that automates the collection
 of nodule counts,sizes, and distances between nodules along the root system.
-While [reference] can segment nodules in images quite well, it requries training a model on your data set, which
+While (insert reference) can segment nodules in images quite well, it requries training a model on your data set, which
 often takes too many images to become sufficiently accurate, particularly when your
 data set is less than around 500. Remaining 
 Our plugin segments the nodules in the given images, allows the user the option to make
 changes, and categorizes the nodules by color. 
 Additionally, there is not a plugin that takes images of plants and converts them into 
 a graph to compute distances between marked objects on the plant along the plants branches. 
-
-
-# Citations
-
-Citations to entries in paper.bib should be in
-[rMarkdown](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html)
-format.
-
-If you want to cite a software repository URL (e.g. something on GitHub without a preferred
-citation) then you can do it with the example BibTeX entry below for @fidgit.
-
-For a quick reference, the following citation commands can be used:
-- `@author:2001`  ->  "Author et al. (2001)"
-- `[@author:2001]` -> "(Author et al., 2001)"
-- `[@author1:2001; @author2:2001]` -> "(Author1 et al., 2001; Author2 et al., 2002)"
 
 
 # Acknowledgements
