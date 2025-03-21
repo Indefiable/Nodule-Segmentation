@@ -10,6 +10,9 @@ name: Build
 
 on:
   push:
+    paths:
+      - src/**
+      - pom.xml
     branches: [ "main" , "Farris-dev", "Zach-dev"]
   pull_request:
     branches: [ "main" ]
