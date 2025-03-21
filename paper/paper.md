@@ -40,7 +40,7 @@ There are currently no unsupervised methods that automates the collection
 of nodule counts,sizes, and distances between nodules along the root system.
 Root Painter is a program that utilizes deep learning to perform segmentation of a 
 variety of biological images[@RootPainter]. Root Painter has been shown to count nodules
-effectively, with relatively small error( $$R^2 = .69$$), but it does not consistently
+effectively, with relatively small error( $R^2 = .69$), but it does not consistently
 fully outline the nodules, and does not compute their area, only the counts. Additionally,
 it utilizes machine learning to improve the output of the data. Our method utilizes 
 an unsupervised method for segmentation with some automated post-processing methods
@@ -50,9 +50,8 @@ before the plugin saves the results.
 Additionally, to our knowledge there is not currently a plugin that takes images of plants and 
 compute the distances between marked objects on the plant along the plant's branches.
 
-#Methods
 
-
+# Methods
 
 We utilize Weka's unsupervised learning method, **Color Clustering** as an initial segmentation phase for the nodules and 
 the root system. Weka's Color 
@@ -65,8 +64,8 @@ can be used on other images to produce consistent segmentations. This model file
  root system into a 1 pixel wide representation of the root system. From there, we use the skeleton to create a graph 
  and use Dijkstra's algorithm to compute the shortest path between nodules along the root system. 
  
-#Implementation
- 
+# Implementation
+
 
  
 ## Implementation Overview
