@@ -27,11 +27,12 @@ bibliography: paper.bib
 
 When performing analysis on hundreds of plants of root systems that have been 
 imaged, it is useful to have a high throughput method for gathering the data
-from the plants. Nodule Analysis is a set of two Fiji[@fiji1] (ImageJ2) plugins (Nodule Segmentation
+from the plants. Fiji is a java based software extending ImageJ2 for performing analysis on biological images [@fiji1].
+Nodule Analysis is a set of two Fiji (ImageJ2) plugins (Nodule Segmentation
 and Nodule Distances) that provides a method for computing the counts, areas, and pair-wise distances along 
 the root system of all of the nodules on an image of a root system using various data gathering methods. 
-The plugin utilizes part of Weka's FIJI plugin[@Weka], particularly their unsupervised color clustering method to segment the nodules and 
-the root system separately. 
+The plugin utilizes part of Weka's FIJI plugin, particularly their unsupervised color clustering method to segment the nodules and 
+the root system separately[@Weka]. 
 
 
 # Statement of need
