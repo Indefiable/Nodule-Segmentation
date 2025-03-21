@@ -101,9 +101,12 @@ The reasoning behind this was that in our dataset, images that were darker had a
 ---
 
 ## Pixel Categorization
+ ![An image of the pixel color distribution. The x axis is the green value
+ and the y axis is the red value. The drawn colors are the labels those pixels are given (gree, mixed, or red).
+ \label{fig:Figure 1}](colors.png)
  
 Once all nodule pixels have been located, they are separated into three arrays based on their red and green values. 
-They are classified using the lines shown in. Notably, there is a curvature when graphing 
+They are classified using the lines shown in\autoref{fig:Figure 1}. Notably, there is a curvature when graphing 
 red vs. green values.
 
 - **Mixed nodule pixels** are found in the center of the curves (yellow pixels where red and green mix).
@@ -155,9 +158,11 @@ At this stage, all data has been processed, and we provide a **manual override**
 
 
 # Results
-
-We have ran the segmentation on over two hundred images producing csv files of the data and images such as in.
- This output has been used in Niall's PhD defense. Additionally, There is a biologist at Washington 
+![An example of the annotated image after the plugin has ran.
+ \label{fig:Figure 2}](annotation.png)
+ 
+We have ran the segmentation on over two hundred images producing csv files of the data and images such as in
+\autoref{fig:Figure 2}. This output has been used in Niall's PhD defense. Additionally, There is a biologist at Washington 
  State University currently using output from the recently finished Nodule Distances plugin to test certain hypothesis, with
  
  results incoming. 
