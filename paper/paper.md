@@ -12,8 +12,7 @@ authors:
     affiliation: "1, 2" # (Multiple affiliations must be quoted)
   - name: Bala Krishanmoorthy
 	orcid: 0000-0002-2727-6547
-    equal-contrib: false # (This is how you can denote equal contributions between multiple authors)
-    affiliation: 2
+    affiliation: 1
 affiliations:
  - name: Washington State University
    index: 1
