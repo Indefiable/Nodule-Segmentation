@@ -154,7 +154,7 @@ At this stage, all data has been processed, and we provide a **manual override**
 - Click "Finish" once the data is satisfactory.
 
 
-#Results
+# Results
 
 We have ran the segmentation on over two hundred images producing csv files of the data and images such as in.
  This output has been used in Niall's PhD defense. Additionally, There is a biologist at Washington 
@@ -162,7 +162,7 @@ We have ran the segmentation on over two hundred images producing csv files of t
  
  results incoming. 
  
-#Conclusions
+# Conclusions
 
 There are some quality of life improvements that could be made to the plugin, but it is currently fully functional and 
 I am interested in having it available to be used by other researches in the bio space.
