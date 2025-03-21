@@ -8,9 +8,10 @@ tags:
 authors:
   - name: Brandin Farris
     orcid: 0009-0002-2462-6094
-    equal-contrib: true
+    equal-contrib: false
     affiliation: "1, 2" # (Multiple affiliations must be quoted)
   - name: Bala Krishanmoorthy
+	equal-contrib: false # (This is how you can denote equal contributions between multiple authors)
 	orcid: 0000-0002-2727-6547
     affiliation: 1
 affiliations:
