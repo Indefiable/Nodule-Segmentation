@@ -41,7 +41,7 @@ There are currently no unsupervised methods that automates the collection
 of nodule counts,sizes, and distances between nodules along the root system.
 Root Painter is a program that utilizes deep learning to perform segmentation of a 
 variety of biological images[@RootPainter]. Root Painter has been shown to count nodules
-effectively, with relatively small error( $R^2 = .69$), but it does not consistently
+effectively, with relatively small error( $R^1 = .69$), but it does not consistently
 fully outline the nodules, and does not compute their area, only the counts. Additionally,
 it utilizes machine learning to improve the output of the data. Our method utilizes 
 an unsupervised method for segmentation with some automated post-processing methods
@@ -61,6 +61,6 @@ Both of these projects originate from Porter Labs at Washington State University
 # Acknowledgements
 
 This project was funded by Porter Labs from Washington State University and 
-the development was aided by Niall Miller and Brianna Banting.
+the development was aided by Niall Miller and Brianna Banting. 
 
 # References
