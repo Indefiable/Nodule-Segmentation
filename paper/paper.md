@@ -10,7 +10,7 @@ authors:
     orcid: 0009-0002-2462-6094
     equal-contrib: true
     affiliation: "1, 2" # (Multiple affiliations must be quoted)
-  - name: Bala Krishanmoorthy
+  - name: Bala Krishnamoorthy
 	orcid: 0000-0002-2727-6547
     equal-contrib: false # (This is how you can denote equal contributions between multiple authors)
     affiliation: 2
@@ -48,7 +48,7 @@ The Nodule Segmentation plugin was used by Niall Miller in his PhD thesis.
 The Nodule Distances plugin was used on the same data set and is being analyzed by Brianna Banting. 
 Both of these projects originated from the Stephanie Porter Lab at Washington State University.
 
-# Acknowledgements
+# Acknowledgments
 
 This project was funded by the Porter Lab from Washington State University and 
 the development was aided by Niall Miller and Brianna Banting. 
