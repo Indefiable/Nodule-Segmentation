@@ -13,7 +13,7 @@ authors:
   - name: Bala Krishnamoorthy
 	orcid: 0000-0002-2727-6547
     equal-contrib: false # (This is how you can denote equal contributions between multiple authors)
-    affiliation: 2
+    affiliation: "2"
 affiliations:
  - name: Washington State University
    index: 1
