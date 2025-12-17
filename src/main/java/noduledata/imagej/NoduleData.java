@@ -595,15 +595,23 @@ public class NoduleData {
 		
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setDialogTitle("Choose a Red ONLY clusterer model.");
-        
+        fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        fileChooser.showOpenDialog(null);
+
         String extension = fileChooser.getSelectedFile().getName().substring(fileChooser.getSelectedFile().getName().lastIndexOf(".") + 1);
         
         if(extension.equalsIgnoreCase("model")) {
         	file = fileChooser.getSelectedFile();
         }
+        else {
+        	IJ.log("Sorry, but the file you selected is not valid. "
+        			+ "The program continues without this optimization.");
+    	   return nodulePixels;
+        }
         
        if(file == null) {
-    	   IJ.log("Sorry, but the file you selected is not valid.");
+    	   IJ.log("Sorry, but the file you selected is not valid."
+    	   		+ "The program continues without this optimization.");
     	   return nodulePixels;
        }
        
