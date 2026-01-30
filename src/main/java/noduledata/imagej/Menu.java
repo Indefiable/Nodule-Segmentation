@@ -139,34 +139,62 @@ public class Menu implements Command {
 		
 		System.out.println("FILE :" + file);
 		JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setDialogTitle("Image to load or file to iterate through.");
-        fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-
-        // Add a file filter for image files (you can customize this for specific image types)
-        FileNameExtensionFilter imageFilter = new FileNameExtensionFilter("Image Files and Folders", "jpg", "jpeg", "png", "gif", "model");
-        fileChooser.setFileFilter(imageFilter);
-        
-        int result = fileChooser.showOpenDialog(null);
-        
-        if(result != JFileChooser.APPROVE_OPTION) {
-        	System.out.println("Error, invalid option.");
-        	return;
-        }
+		FileNameExtensionFilter imageFilter;
+        int result;
         
         
     	switch(file) {
     	
     	case "image or folder" :
+    		fileChooser.setDialogTitle("Image to load or file to iterate through.");
+    		fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+
+        // Add a file filter for image files (you can customize this for specific image types)
+    		imageFilter = new FileNameExtensionFilter("Image Files and Folders", "jpg", "jpeg", "png", "gif");
+    		fileChooser.setFileFilter(imageFilter);
+        
+    		result = fileChooser.showOpenDialog(null);
+        
+    		if(result != JFileChooser.APPROVE_OPTION) {
+    			System.out.println("Error, invalid option.");
+    			return;
+    		}
     		this.file = fileChooser.getSelectedFile();
     		System.out.println("Chosen: " + this.file.getAbsolutePath());
     		break;
     		
     	case "model":
+    		fileChooser.setDialogTitle("Select the model file to use for segmentation.");
+    		fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+
+        // Add a file filter for image files (you can customize this for specific image types)
+    		imageFilter = new FileNameExtensionFilter("Image Files and Folders", "model");
+    		fileChooser.setFileFilter(imageFilter);
+        
+    		result = fileChooser.showOpenDialog(null);
+        
+    		if(result != JFileChooser.APPROVE_OPTION) {
+    			System.out.println("Error, invalid option.");
+    			return;
+    		}
     		this.modelFile = fileChooser.getSelectedFile();
     		System.out.println("Chosen: " + this.modelFile.getAbsolutePath());
     		break;
     		
-    	case "saveFile": 
+    	case "saveFile":
+    		fileChooser.setDialogTitle("Select a folder to save your output.");
+    		fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+
+        // Add a file filter for image files (you can customize this for specific image types)
+    		imageFilter = new FileNameExtensionFilter("Image Files and Folders", "jpg");
+    		fileChooser.setFileFilter(imageFilter);
+        
+    		result = fileChooser.showOpenDialog(null);
+        
+    		if(result != JFileChooser.APPROVE_OPTION) {
+    			System.out.println("Error, invalid option.");
+    			return;
+    		}
     		this.saveFile = fileChooser.getSelectedFile();
     		System.out.println("Chosen: " + this.saveFile.getAbsolutePath());
     		break;
